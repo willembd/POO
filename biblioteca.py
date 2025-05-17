@@ -101,3 +101,53 @@ class Triangulo(Forma):
     def calculaPerimetro(self):
         self.perimetro=self.base*3
         print(self.perimetro)
+
+
+
+
+class Atleta():
+    def __init__(self):
+        self.aposentado = False
+        self.aquecido = False
+
+    def aquecer(self):
+        self.aquecido=True
+
+    def aposentar(self):
+        self.aquecido = True
+
+class Corredor(Atleta):
+
+    def correr(self):
+        if self.aposentado == True or self.aquecido == False:
+            print("O atleta não pode correr")
+            return
+        print("Correndo")
+
+class Nadador(Atleta):
+
+    def nadar(self):
+        if self.aposentado == True or self.aquecido == False:
+            print("O atleta não pode nadar")
+            return
+        print("Nadando")
+
+class Ciclista(Atleta):
+
+    def pedala(self):
+        if self.aposentado == True or self.aquecido == False:
+            print("O atleta não pode pedalar")
+            return
+        print("Pedalando")
+
+
+class TriAtleta(Corredor, Nadador, Ciclista):
+
+    def prova(self):
+        if self.aposentado == True or self.aquecido == False:
+            print("O atleta não pode fazer a prova")
+            return
+        self.nadar()
+        self.correr()
+        self.pedala()
+

@@ -1,4 +1,4 @@
-from biblioteca import Vip, Ingresso, Retangulo, Triangulo
+from biblioteca import Vip, Ingresso, Retangulo, Triangulo, Corredor, Nadador, TriAtleta
 
 """aluno01=Pessoa("Willem", 110, 25)
 aluno02=Pessoa("Bruno", 105, 22, )
@@ -39,11 +39,16 @@ ingressoVip = Vip(valor)
 ingressoVip.imprimeValor()"""
 
 
-
+"""
 r1=Retangulo()
 r1.calcularArea(3,7)
 r1.calcularPerimetro(3,7)
 
 t1 = Triangulo(3,7)
 t1.calculaArea()
-t1.calculaPerimetro()
+t1.calculaPerimetro()"""
+
+
+atleta = TriAtleta()
+atleta.aquecer()
+atleta.prova()
